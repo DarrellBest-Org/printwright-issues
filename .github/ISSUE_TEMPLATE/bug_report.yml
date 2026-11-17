@@ -1,0 +1,45 @@
+name: Bug report
+description: Something in Printwright does not work as expected.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Issues here are public, so leave out anything private.
+        Reports from the app arrive prefilled; check them before you submit.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: What you expected, and what you saw instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the drawer organizer
+        2. ...
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: Filled in by Printwright. Version, platform, printer, tool settings and model size; never files or paths.
+      render: text
+  - type: textarea
+    id: debug
+    attributes:
+      label: Debug report
+      description: |
+        Filled in by the Printwright app: a snapshot of the app's state (settings, open tool, model
+        sizes and mesh checks, recent events and errors), with paths and names removed. If it says
+        it was trimmed, attach the saved file below.
+      render: json
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments
+      description: |
+        Drag files here: screenshots, and the printwright-debug JSON file from your Downloads folder
+        if the app saved one. Only share a model file if you are happy for it to be public.
